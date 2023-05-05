@@ -11,11 +11,18 @@
     <h1>Hello Vue :)</h1>
     <div id="app">
         <!-- <h2>I am the template now</h2> -->
-        <p>{{title}}-{{author}}-{{age}}</p>
+        <div v-if="showBooks">
+            <p>{{title}}-{{author}}-{{age}}</p>
+
+        </div>
+        <button @click="toggleShowBooks">
+            <span v-if="showBooks">Hide Books</span>
+            <span v-if="!showBooks">Show Books</span>
+        </button>
         <!-- <p>The final Empire</p> -->
-        <button v-on:click="age++">Increase age</button>
+        <!-- <button v-on:click="age++">Increase age</button>
         <button v-on:click="age--">Decrease age</button>
-        <div @click="changeTitle('Oathbringer')">Change Book Title</div>
+        <div @click="changeTitle('Oathbringer')">Change Book Title</div> -->
     </div>
     
     <script src="/app.js"></script>
