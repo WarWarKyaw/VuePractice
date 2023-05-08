@@ -21,9 +21,18 @@
 <body>
     <h1>Hello Vue :)</h1>
     <div id="app">
-        <!-- <h2>I am the template now</h2> -->
+        
         <div v-if="showBooks">
-            <p>{{title}}-{{author}}-{{age}}</p>
+            <!-- <p>{{books[0].title}}-{{books[0].author}}</p>
+            <p>{{books[1].title}}-{{books[1].author}}</p>
+            <p>{{books[2].title}}-{{books[2].author}}</p> -->
+            <ul>
+                <li v-for="book in books">
+                    <h3>{{book.title}}</h3>
+                    <p>{{book.author}}</p>
+
+                </li>
+            </ul>
 
         </div>
         <button @click="toggleShowBooks">
@@ -32,13 +41,13 @@
         </button>
         <br>
         <!-- mouse event -->
-    
+<!--     
         <div class="box" @mouseover="handleEvent($event,5)">mouseOver (Enter)</div>
         <div class="box" @mouseleave="handleEvent">mouseleave</div>
         <div class="box" @dblclick="handleEvent">double click</div>
         <div class="box" @mousemove="handleMousemove">position-{{x}} {{y}}</div>
 
-        <div v-show="showBooks">currently showing books </div>
+        <div v-show="showBooks">currently showing books </div> -->
         <!-- <p>The final Empire</p> -->
         <!-- <button v-on:click="age++">Increase age</button>
         <button v-on:click="age--">Decrease age</button>

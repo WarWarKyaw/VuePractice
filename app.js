@@ -3,11 +3,18 @@ const app = Vue.createApp({
     data(){
         return{
             showBooks:true,
-            title:'The final Empire',
-            author:'Bradon Sanderson',
-            age:45,
-            x:0,
-            y:0
+            // title:'The final Empire',
+            // author:'Bradon Sanderson',
+            // age:45,
+            // x:0,
+            // y:0
+            books:[
+                {title:'The name of the wind', author:'patrick routhfuss'},
+                {title:'The name of the kings', author:'brandon sanderson'},
+                {title:'The final empire', author:'brandon sanderson'}
+            
+            
+            ]
         }
     },
     methods: {
@@ -26,7 +33,7 @@ const app = Vue.createApp({
         },
         handleMousemove(e){
             this.x=e.offsetX
-            this.y=e.offSetY
+            this.y=e.offsetY
 
         }
 
