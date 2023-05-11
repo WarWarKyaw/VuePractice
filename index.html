@@ -44,7 +44,9 @@
   </head>
   <body>
     <h1>Hello Vue :)</h1>
+
     <div id="app">
+      <p>{{ filterBooks }}</p>
       <!-- attribute binding -->
       <a v-bind:href="url">best website ever</a>
 
@@ -54,7 +56,7 @@
             <p>{{books[2].title}}-{{books[2].author}}</p> -->
         <ul>
           <li
-            v-for="book in books"
+            v-for="book in filterBooks"
             :class="{fav:book.isFav}"
             @click="favBooks(book)"
           >
